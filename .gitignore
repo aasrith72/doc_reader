@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / C extensions
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Secrets - Do NOT commit your API keys
+*.env
+.env
+
+# Project-specific generated files
+vectorstore/
+
+# IDE / Editor specific files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
