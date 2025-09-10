@@ -108,7 +108,7 @@ from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
-HF_TOKEN = os.getenv("Hugging_face")
+HF_TOKEN = st.secrets("Hugging_face")
 if not HF_TOKEN:
     raise ValueError("Hugging Face token not found. Please set HUGGINGFACE_HUB_TOKEN in your .env file.")
 
@@ -176,4 +176,5 @@ def generate_answer(query: str, relevant_chunks: list[str]) -> str:
         )
         return response.choices[0].message.content
     except Exception as e:
+
         return f"An error occurred while generating the answer: {e}"
