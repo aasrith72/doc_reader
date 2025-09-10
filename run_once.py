@@ -1,4 +1,3 @@
-# run_once.py
 import rag_utils
 import os
 
@@ -17,4 +16,5 @@ if __name__ == "__main__":
     rag_utils.create_and_save_vectorstore(docs_folder, vectorstore_folder)
     
     print(f"Vectorstore created and saved in the '{vectorstore_folder}' directory.")
+
     print("You can now run the main application with 'streamlit run app.py'")
