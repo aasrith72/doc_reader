@@ -179,4 +179,5 @@ if user_query := st.chat_input("Ask a question about your documents..."):
                 st.markdown(response)
         
         # Add assistant response to history
+
         st.session_state.messages.append({"role": "assistant", "content": response})
