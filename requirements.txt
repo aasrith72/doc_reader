@@ -4,5 +4,6 @@ faiss-cpu
 PyPDF2
 huggingface_hub
 python-dotenv
-langchain
+langchain-text-splitters
+
 
