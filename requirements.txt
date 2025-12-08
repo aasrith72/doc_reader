@@ -3,5 +3,6 @@ sentence-transformers
 faiss-cpu
 PyPDF2
 huggingface_hub
-dotenv
+python-dotenv
 langchain
+
