@@ -1,7 +1,7 @@
 import os
 import json
 from PyPDF2 import PdfReader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from sentence_transformers import SentenceTransformer
 import faiss
 from huggingface_hub import InferenceClient
@@ -153,3 +153,4 @@ def generate_answer(query: str, relevant_chunks: list[str]) -> str:
         return response.choices[0].message.content
     except Exception as e:
         return f"An error occurred while generating the answer. Please check your Hugging Face token and network connection. Error: {e}"
+
