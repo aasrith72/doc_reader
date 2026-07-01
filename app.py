@@ -82,7 +82,16 @@ if user_query := st.chat_input("Ask a question about your documents..."):
     st.session_state.messages.append({"role": "user", "content": user_query})
     with st.chat_message("user"):
         st.markdown(user_query)
+    with st.chat_message("assistant"):
+        with st.spinner("Thinking..."):
+            retrieved_chunks = rag_utils.retrieve_relevant_chunks(
+                user_query, 
+                st.session_state.vector_store, 
+                st.session_state.text_chunks
+            )
+            response = rag_utils.generate_answer(user_query, retrieved_chunks)
+            st.markdown(response)
+        
+        # Add assistant response to history
+        st.session_state.messages.append({"role": "assistant", "content": response})
 
-    # Generate and display assistant response
-    nt", "content": response})
-print(False)
